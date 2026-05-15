@@ -76,7 +76,7 @@ class PortKillerGUI:
 
     def kill_process(self):
         if not self.process_info:
-            messagebox.showerror("警告:没有进程占用端口")
+            messagebox.showerror("警告", "没有进程占用端口")
             return
         result = messagebox.askyesno("确认", f"确认结束进程 {self.process_info['pid']} 吗？")
         if not result:
